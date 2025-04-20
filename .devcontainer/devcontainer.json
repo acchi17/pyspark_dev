@@ -1,14 +1,16 @@
 {
 	// Dev Container name (not Container name)
-	"name": "pyspark_test",
+	"name": "pyspark_dev",
 	// Change the default user from root user
-	"remoteUser": "pyspark", 
+	"remoteUser": "vscode", 
 	// Specify where in the Container to place the workspace open in VSCode.
-	"workspaceFolder": "/home/pyspark",
+	"workspaceFolder": "/home/vscode",
 	// Mount setting
-	"workspaceMount": "source=${localWorkspaceFolder},target=/home/pyspark,type=bind,consistency=cached",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode,type=bind,consistency=cached",
 	"build": {
-		"dockerfile": "Dockerfile"
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {}
 	},
 	"customizations": {
 		"vscode": {
